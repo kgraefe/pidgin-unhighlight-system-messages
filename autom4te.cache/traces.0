@@ -2891,7 +2891,7 @@ m4trace:configure.in:31: -1- m4_pattern_allow([^PO_IN_DATADIR_FALSE$])
 m4trace:configure.in:31: -1- m4_pattern_allow([^POFILES$])
 m4trace:configure.in:31: -1- m4_pattern_allow([^POSUB$])
 m4trace:configure.in:31: -1- m4_pattern_allow([^MKINSTALLDIRS$])
-m4trace:configure.in:34: -1- PKG_CHECK_MODULES([pidgin], [pidgin >= 2.10.7], [], [AC_MSG_ERROR(pidgin >= 2.10.7 required! Please make sure that pidgin development files are installed.)])
+m4trace:configure.in:34: -1- PKG_CHECK_MODULES([pidgin], [pidgin >= 2.0.0], [], [AC_MSG_ERROR(pidgin >= 2.0.0 required! Please make sure that pidgin development files are installed.)])
 m4trace:configure.in:34: -1- PKG_PROG_PKG_CONFIG
 m4trace:configure.in:34: -1- m4_pattern_forbid([^_?PKG_[A-Z_]+$])
 m4trace:configure.in:34: -1- m4_pattern_allow([^PKG_CONFIG(_(PATH|LIBDIR|SYSROOT_DIR|ALLOW_SYSTEM_(CFLAGS|LIBS)))?$])
@@ -2902,9 +2902,9 @@ m4trace:configure.in:34: -1- m4_pattern_allow([^PKG_CONFIG_LIBDIR$])
 m4trace:configure.in:34: -1- m4_pattern_allow([^PKG_CONFIG$])
 m4trace:configure.in:34: -1- m4_pattern_allow([^pidgin_CFLAGS$])
 m4trace:configure.in:34: -1- m4_pattern_allow([^pidgin_LIBS$])
-m4trace:configure.in:34: -1- PKG_CHECK_EXISTS([pidgin >= 2.10.7], [pkg_cv_[]pidgin_CFLAGS=`$PKG_CONFIG --[]cflags "pidgin >= 2.10.7" 2>/dev/null`
+m4trace:configure.in:34: -1- PKG_CHECK_EXISTS([pidgin >= 2.0.0], [pkg_cv_[]pidgin_CFLAGS=`$PKG_CONFIG --[]cflags "pidgin >= 2.0.0" 2>/dev/null`
 		      test "x$?" != "x0" && pkg_failed=yes ], [pkg_failed=yes])
-m4trace:configure.in:34: -1- PKG_CHECK_EXISTS([pidgin >= 2.10.7], [pkg_cv_[]pidgin_LIBS=`$PKG_CONFIG --[]libs "pidgin >= 2.10.7" 2>/dev/null`
+m4trace:configure.in:34: -1- PKG_CHECK_EXISTS([pidgin >= 2.0.0], [pkg_cv_[]pidgin_LIBS=`$PKG_CONFIG --[]libs "pidgin >= 2.0.0" 2>/dev/null`
 		      test "x$?" != "x0" && pkg_failed=yes ], [pkg_failed=yes])
 m4trace:configure.in:34: -1- _PKG_SHORT_ERRORS_SUPPORTED
 m4trace:configure.in:47: -1- m4_pattern_allow([^LIB@&t@OBJS$])

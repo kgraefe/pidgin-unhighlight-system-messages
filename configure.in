@@ -31,7 +31,7 @@ ALL_LINGUAS=""
 AM_GLIB_GNU_GETTEXT
 
 # Checks for libraries.
-PKG_CHECK_MODULES(pidgin, [pidgin >= 2.10.7], , [AC_MSG_ERROR(pidgin >= 2.10.7 required! Please make sure that pidgin development files are installed.)])
+PKG_CHECK_MODULES(pidgin, [pidgin >= 2.0.0], , [AC_MSG_ERROR(pidgin >= 2.0.0 required! Please make sure that pidgin development files are installed.)])
 LIBS="$LIBS $pidgin_LIBS"
 CFLAGS="$CFLAGS $pidgin_CFLAGS -Wall"
 

@@ -1,0 +1,16 @@
+DEB_REVISION
+Makefile
+config.h
+config.log
+config.status
+libtool
+pidgin-unhighlight-system-messages-*.tar.gz
+po/Makefile
+po/Makefile.in
+po/POTFILES
+po/stamp-it
+src/.deps
+src/.libs
+src/Makefile
+src/unhighlight-system-messages.lo
+src/unhighlight_system_messages.la

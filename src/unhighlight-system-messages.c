@@ -19,20 +19,45 @@
 
 #include "unhighlight-system-messages.h"
 
-#include <plugin.h>
+#include <gtkplugin.h>
 #include <version.h>
-#include <util.h>
-#include <prefs.h>
+#include <gtkconv.h>
 
-PurplePlugin *plugin;
+static void (*write_conv_ori)(PurpleConversation *conv, const char *name, const char *alias, const char *message, PurpleMessageFlags flags, time_t mtime);
 
-static gboolean plugin_load(PurplePlugin *_plugin) {
-	plugin = _plugin;
-	
+static void write_conv(PurpleConversation *conv, const char *name, const char *alias, const char *message, PurpleMessageFlags flags, time_t mtime) {
+	if((flags & PURPLE_MESSAGE_SYSTEM) && (flags & PURPLE_MESSAGE_NICK)) {
+		flags &= ~PURPLE_MESSAGE_NICK;
+	}
+
+	if(write_conv_ori) {
+		write_conv_ori(conv, name, alias, message, flags, mtime);
+	}
+}
+
+static gboolean plugin_load(PurplePlugin *plugin) {
+	PurpleConversationUiOps *ops;
+
+	ops = pidgin_conversations_get_conv_ui_ops();
+	if(!ops) {
+		return FALSE;
+	}
+
+	write_conv_ori = ops->write_conv;
+	ops->write_conv = write_conv;
+
 	return TRUE;
 }
 
-static gboolean plugin_unload(PurplePlugin *_plugin) {
+static gboolean plugin_unload(PurplePlugin *plugin) {
+	PurpleConversationUiOps *ops;
+
+	ops = pidgin_conversations_get_conv_ui_ops();
+	if(!ops) {
+		return FALSE;
+	}
+
+	ops->write_conv = write_conv_ori;
 	return TRUE;
 }
 
@@ -41,7 +66,7 @@ static PurplePluginInfo info = {
 	PURPLE_MAJOR_VERSION,
 	PURPLE_MINOR_VERSION,
 	PURPLE_PLUGIN_STANDARD,			/**< type           */
-	PURPLE_PLUGIN_TYPE,			/**< ui_requirement */
+	PIDGIN_PLUGIN_TYPE,					/**< ui_requirement */
 	0,					/**< flags          */
 	NULL,					/**< dependencies   */
 	PURPLE_PRIORITY_DEFAULT,		/**< priority       */
