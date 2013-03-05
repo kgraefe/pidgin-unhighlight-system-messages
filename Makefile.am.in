@@ -1,0 +1,12 @@
+EXTRA_DIST = \
+	@@HEADERFILES@@ \
+	ChangeLog \
+	VERSION \
+	config.h.mingw \
+	src/Makefile.mingw \
+	Makefile.mingw \
+	po/Makefile.mingw
+
+SUBDIRS = src po
+
+ACLOCAL_AMFLAGS=-I m4
