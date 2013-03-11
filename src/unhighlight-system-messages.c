@@ -113,7 +113,7 @@ static void init_plugin(PurplePlugin *plugin) {
 
 	info.name        = _("Unhighlight System Messages");
 	info.summary     = _("This plugin removes the highlight flag from system messages.");
-	info.description = _("This plugin removes the highlight flag from system messages. This works around a bug which was introduced with Pidgin 2.10.7 and leads to a highlighted IRC channel each time you join when you set the channel topic.");
+	info.description = _("This plugin removes the highlight flag from system messages. This works around a bug which was introduced with Pidgin 2.10.7 and leads to a highlighted IRC channel each time you join if you set the channel topic.");
 }
 
 PURPLE_INIT_PLUGIN(PLUGIN_STATIC_NAME, init_plugin, info)
