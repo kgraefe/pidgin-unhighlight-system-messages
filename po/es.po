@@ -1,4 +1,4 @@
-# Brazilian Portuguese translation for pidgin-unhighlight-system-messages
+# Spanish translation for pidgin-unhighlight-system-messages
 # Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
 # This file is distributed under the same license as the pidgin-unhighlight-system-messages package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: pidgin-unhighlight-system-messages\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-04-08 06:25+0000\n"
-"PO-Revision-Date: 2013-03-13 23:34+0000\n"
-"Last-Translator: Romoaldo Cordeiro <Unknown>\n"
-"Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
+"PO-Revision-Date: 2013-04-08 06:48+0000\n"
+"Last-Translator: Adolfo Jayme Barrientos <fitoschido@gmail.com>\n"
+"Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,11 +19,12 @@ msgstr ""
 
 #: ../src/unhighlight-system-messages.c:114
 msgid "Unhighlight System Messages"
-msgstr "Não Destacar Mensagens do Sistema"
+msgstr "No resaltar los mensajes del sistema"
 
 #: ../src/unhighlight-system-messages.c:115
 msgid "This plugin removes the highlight flag from system messages."
-msgstr "Este plugin remove o destaque de mensagens do sistema."
+msgstr ""
+"Este complemento quita la señal de resaltado de los mensajes del sistema."
 
 #: ../src/unhighlight-system-messages.c:116
 msgid ""
@@ -31,6 +32,7 @@ msgid ""
 "around a bug which was introduced with Pidgin 2.10.7 and leads to a "
 "highlighted IRC channel each time you join if you set the channel topic."
 msgstr ""
-"Este plugin remove o destaque de mensagens do sistema. Isso funciona em "
-"torno de um bug que foi introduzido com o Pidgin 2.10.7 e leva a um canal do "
-"IRC destacado cada vez que você se juntar, se você definir o tópico do canal."
+"Este complemento quita la señal de resaltado de los mensajes del sistema. "
+"Esto soluciona provisionalmente un error que se introdujo con Pidgin 2.10.7 "
+"y que provoca que se resalten los canales de IRC cuando el usuario se une a "
+"ellos, si éste establece el tema del canal."
