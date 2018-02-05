@@ -1,21 +1,22 @@
-# German translation for pidgin-unhighlight-system-messages
-# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
-# This file is distributed under the same license as the pidgin-unhighlight-system-messages package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: pidgin-unhighlight-system-messages\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-04-08 06:25+0000\n"
-"PO-Revision-Date: 2013-03-11 22:38+0000\n"
-"Last-Translator: Konrad Gräfe <konradgraefe@aol.com>\n"
-"Language-Team: German <de@li.org>\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-05 18:57+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Konrad Gräfe <konradgraefe@aol.com>, 2018\n"
+"Language-Team: German (https://www.transifex.com/kgraefe/teams/83159/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-04-09 05:59+0000\n"
-"X-Generator: Launchpad (build 16550)\n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/unhighlight-system-messages.c:114
 msgid "Unhighlight System Messages"
@@ -34,5 +35,5 @@ msgid ""
 msgstr ""
 "Dieses  Plugin entfernt  die Hervorhebung (Highlight) von Systemnachrichten "
 "und  umgeht so einen in Pidgin 2.10.7 eingeführten Fehler, der dazu führt,  "
-"dass ein Chat, in dem man selbst das Thema gesetzt hat, bei jedem  Verbinden "
-"hervorgehoben wird."
+"dass ein Chat, in dem man selbst das Thema gesetzt hat, bei jedem  Verbinden"
+" hervorgehoben wird."
