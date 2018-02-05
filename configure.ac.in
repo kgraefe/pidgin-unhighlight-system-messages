@@ -11,7 +11,7 @@ AC_CONFIG_MACRO_DIR([m4])
 # Note: AC_DEFINE_UNQUOTED() needs to be in a single line in order to not
 #       break scripts/gen-mingw-config_h.sh on Windows.
 AC_DEFINE_UNQUOTED(PLUGIN_VERSION, ["@@VERSION@@"], [Version])
-AC_DEFINE_UNQUOTED(PLUGIN_WEBSITE, ["http://freakazoid.teamblind.de"], [Website])
+AC_DEFINE_UNQUOTED(PLUGIN_WEBSITE, ["https://github.com/kgraefe/pidgin-unhighlight-system-messages"], [Website])
 AC_DEFINE_UNQUOTED(PLUGIN_ID, ["gtk-freakazoid-unhighlight-system-messages"], [Pidgin internal plugin ID])
 AC_DEFINE_UNQUOTED(PLUGIN_STATIC_NAME, ["unhighlight-system-messages"], [Static name for debug output])
 AC_DEFINE_UNQUOTED(PLUGIN_PREFS_PREFIX, ["/plugins/gtk/unhighlight-system-messages"], [Prefix for preferences in prefs.xml])
