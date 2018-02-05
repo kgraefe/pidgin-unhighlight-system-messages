@@ -1,13 +1,3 @@
-#
-# Makefile.mingw
-#
-# Description: Makefile for win32 (mingw)
-#
-
-#
-# PATHS
-#
-
 PLUGIN_SRC :=		./src
 PLUGIN_PO :=		./po
 
@@ -17,26 +7,36 @@ PLUGIN_TOP := .
 PIDGIN_TREE_TOP ?=		../../..
 include $(PIDGIN_TREE_TOP)/libpurple/win32/global.mak
 
-##
-## VARIABLE DEFINITIONS
-##
+PLUGIN := pidgin-unhighlight-system-messages
+PLUGIN_VERSION := $(shell ./scripts/gen-version.sh)
+PLUGIN_WIN32_ZIP := $(PLUGIN)-$(PLUGIN_VERSION)-win32.zip
 
-PLUGIN_VERSION := $(shell cat ./VERSION)
+.PHONY: all build install installer clean
 
-PIDGIN_VERSION := $(shell cat $(PIDGIN_TREE_TOP)/VERSION)
+all: build
 
-.PHONY: all install installer clean
+build: config.h
+	$(MAKE) -C $(PLUGIN_SRC) -f Makefile.mingw all
+	$(MAKE) -C $(PLUGIN_PO) -f Makefile.mingw all
 
-all:
-	$(MAKE) -C $(PLUGIN_SRC) -f Makefile.mingw
-	$(MAKE) -C $(PLUGIN_PO) -f Makefile.mingw
+config.h: .stamp-version-$(PLUGIN_VERSION) configure.ac scripts/gen-mingw-config_h.sh
+	./scripts/gen-mingw-config_h.sh > config.h
 
-config.h: config.h.mingw
-	cp config.h.mingw config.h
+.stamp-version-$(PLUGIN_VERSION):
+	rm -f .stamp-version*
+	touch $@
 
-install: all
-	$(MAKE) -C $(PLUGIN_SRC) -f Makefile.mingw install
-	$(MAKE) -C $(PLUGIN_PO) -f Makefile.mingw install
+# If configure.ac.in exists, we generate configure.ac. Otherwise we assume that
+# configure.ac exists (as in the release tarball).
+ifneq ("$(wildcard configure.ac.in)", "")
+configure.ac: configure.ac.in .stamp-version-$(PLUGIN_VERSION) ./scripts/gen-configure_ac.sh
+	./scripts/gen-configure_ac.sh
+endif
+
+dist: $(PLUGIN_WIN32_ZIP)
+
+$(PLUGIN_WIN32_ZIP): build
+	./scripts/gen-mingw-dist.sh $@ $(PLUGIN) $(PLUGIN).dll
 
 clean:
 	$(MAKE) -C $(PLUGIN_SRC) -f Makefile.mingw clean
