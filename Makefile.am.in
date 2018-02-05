@@ -6,9 +6,9 @@ EXTRA_DIST = \
 	Makefile.mingw \
 	src/Makefile.mingw \
 	po/Makefile.mingw \
-	ChangeLog \
+	CHANGES.md \
 	README.md \
-	AUTHORS \
+	AUTHORS.md \
 	VERSION
 
 SUBDIRS = src po
