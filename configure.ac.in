@@ -8,16 +8,14 @@ AC_CONFIG_SRCDIR([src/unhighlight-system-messages.c])
 AC_CONFIG_HEADER([config.h])
 AC_CONFIG_MACRO_DIR([m4])
 
-AC_DEFINE_UNQUOTED(PLUGIN_VERSION, ["@@VERSION@@"], [Define the plugin version to be used])
-
-AC_DEFINE_UNQUOTED(PLUGIN_WEBSITE, ["http://freakazoid.teamblind.de/"], [Define the plugin website to be used])
-
-AC_DEFINE_UNQUOTED(PLUGIN_ID, ["gtk-freakazoid-unhighlight-system-messages"], [Define the plugin website to be used])
-
-AC_DEFINE_UNQUOTED(PLUGIN_STATIC_NAME, ["unhighlight-system-messages"], [Define the plugin website to be used])
-AC_DEFINE_UNQUOTED(PLUGIN_PREFS_PREFIX, ["/plugins/gtk/unhighlight-system-messages"], [Define the plugin website to be used])
-
-AC_DEFINE_UNQUOTED(PLUGIN_AUTHOR, ["Konrad Gräfe <konradgraefe@aol.com>"], [Define the plugin author to be used])
+# Note: AC_DEFINE_UNQUOTED() needs to be in a single line in order to not
+#       break scripts/gen-mingw-config_h.sh on Windows.
+AC_DEFINE_UNQUOTED(PLUGIN_VERSION, ["@@VERSION@@"], [Version])
+AC_DEFINE_UNQUOTED(PLUGIN_WEBSITE, ["http://freakazoid.teamblind.de"], [Website])
+AC_DEFINE_UNQUOTED(PLUGIN_ID, ["gtk-freakazoid-unhighlight-system-messages"], [Pidgin internal plugin ID])
+AC_DEFINE_UNQUOTED(PLUGIN_STATIC_NAME, ["unhighlight-system-messages"], [Static name for debug output])
+AC_DEFINE_UNQUOTED(PLUGIN_PREFS_PREFIX, ["/plugins/gtk/unhighlight-system-messages"], [Prefix for preferences in prefs.xml])
+AC_DEFINE_UNQUOTED(PLUGIN_AUTHOR, ["Konrad Gräfe <konradgraefe@aol.com>"], [Author])
 
 
 # Checks for programs.
@@ -26,7 +24,7 @@ AC_PROG_LIBTOOL
 AC_PROG_INTLTOOL
 GETTEXT_PACKAGE=pidgin-unhighlight-system-messages
 AC_SUBST(GETTEXT_PACKAGE)
-AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, ["$GETTEXT_PACKAGE"], [Define the gettext package to be used])
+AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, ["$GETTEXT_PACKAGE"], [Gettext package])
 ALL_LINGUAS="@@LANGUAGES@@"
 AM_GLIB_GNU_GETTEXT
 
@@ -41,8 +39,10 @@ CFLAGS="$CFLAGS $pidgin_CFLAGS -Wall"
 
 # Checks for library functions.
 
-AC_CONFIG_FILES([Makefile
-                 src/Makefile
-		 po/Makefile.in])
+AC_CONFIG_FILES([
+	Makefile
+	src/Makefile
+	po/Makefile.in
+])
 AC_OUTPUT
 
