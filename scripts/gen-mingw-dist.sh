@@ -27,7 +27,7 @@ for f in po/*.po; do
 	cp po/$lang.gmo $TEMPDIR/$PLUGIN/locale/$lang/LC_MESSAGES/$GETTEXT_PKG.mo
 done
 
-for f in README ChangeLog AUTHORS COPYING; do
+for f in README.md ChangeLog AUTHORS COPYING; do
 	unix2dos -n $f $TEMPDIR/$f
 done
 

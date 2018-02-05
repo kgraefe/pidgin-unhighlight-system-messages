@@ -7,7 +7,7 @@ EXTRA_DIST = \
 	src/Makefile.mingw \
 	po/Makefile.mingw \
 	ChangeLog \
-	README \
+	README.md \
 	AUTHORS \
 	VERSION
 
