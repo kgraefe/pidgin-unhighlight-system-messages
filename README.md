@@ -2,6 +2,11 @@
 
 [![License](https://img.shields.io/badge/License-GPLv2-blue.svg?style=flat)](COPYING)
 
+This plugin removes the highlight flag from system messages. This works around
+a bug which was introduced with Pidgin 2.10.7 and leads to a highlighted IRC
+channel each time you join when you set the channel topic.
+
+
 ## Installation on Windows
 For the binary version, extract all the contents of
 `pidgin-unhighlight-system-messages` in the ZIP file either to the installation
