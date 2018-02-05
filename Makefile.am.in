@@ -1,11 +1,15 @@
 EXTRA_DIST = \
 	@@HEADERFILES@@ \
-	ChangeLog \
-	VERSION \
-	config.h.mingw \
-	src/Makefile.mingw \
+	scripts/gen-mingw-config_h.sh \
+	scripts/gen-version.sh \
+	scripts/gen-mingw-dist.sh \
 	Makefile.mingw \
-	po/Makefile.mingw
+	src/Makefile.mingw \
+	po/Makefile.mingw \
+	ChangeLog \
+	README \
+	AUTHORS \
+	VERSION
 
 SUBDIRS = src po
 
