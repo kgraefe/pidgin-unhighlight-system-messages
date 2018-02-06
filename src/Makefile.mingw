@@ -24,7 +24,7 @@ PLUGIN = pidgin-unhighlight-system-messages
 
 #CFLAGS = 
 
-DEFINES = -DPLUGIN_VERSION=\"$(PLUGIN_VERSION)\" -DHAVE_CONFIG_H
+DEFINES = -DHAVE_CONFIG_H
 
 #LDFLAGS = 
 
