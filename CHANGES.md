@@ -1,6 +1,6 @@
 # Pidgin Unhighlight System Messages Changes
 
-## Version 1.0 (in development)
+## Version 1.0 (2017-02-06)
 - Add German, Brazilian Portuguese and Spanish translation
 - Update plugin website
 
