@@ -1,6 +1,7 @@
 # Pidgin Unhighlight System Messages
 
 [![License](https://img.shields.io/badge/License-GPLv2-blue.svg?style=flat)](COPYING)
+[![Download](https://img.shields.io/badge/Download-Latest_Release-brightgreen.svg?style=flat)](https://github.com/kgraefe/pidgin-unhighlight-system-messages/releases/latest)
 
 This plugin removes the highlight flag from system messages. This works around
 a bug which was introduced with Pidgin 2.10.7 and leads to a highlighted IRC
